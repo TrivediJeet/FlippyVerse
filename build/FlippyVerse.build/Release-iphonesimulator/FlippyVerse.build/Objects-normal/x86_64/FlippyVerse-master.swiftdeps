@@ -1,0 +1,12 @@
+version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
+options: "b82c99076ffaa766ddf917c0ea245b29"
+build_time: [549674948, 252547000]
+inputs:
+  "/Users/jeettrivedi/Desktop/FlippyVerse/FlippyVerse/GamePlaySceneClass.swift": [9223372036854775807, 0]
+  "/Users/jeettrivedi/Desktop/FlippyVerse/FlippyVerse/MainMenuSceneClass.swift": [9223372036854775807, 0]
+  "/Users/jeettrivedi/Desktop/FlippyVerse/FlippyVerse/PlayerClass.swift": [9223372036854775807, 0]
+  "/Users/jeettrivedi/Desktop/FlippyVerse/FlippyVerse/GameViewController.swift": [9223372036854775807, 0]
+  "/Users/jeettrivedi/Desktop/FlippyVerse/FlippyVerse/ItemController.swift": [9223372036854775807, 0]
+  "/Users/jeettrivedi/Desktop/FlippyVerse/FlippyVerse/BGClass.swift": [9223372036854775807, 0]
+  "/Users/jeettrivedi/Desktop/FlippyVerse/FlippyVerse/AppDelegate.swift": [9223372036854775807, 0]
+  "/Users/jeettrivedi/Desktop/FlippyVerse/FlippyVerse/GroundClass.swift": [9223372036854775807, 0]

@@ -1,0 +1,522 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E1BAC045D990393E9AD02AB /* Pods_FlippyVerse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D048EA0B38635432513A6E27 /* Pods_FlippyVerse.framework */; };
+		ED0333571ED5298F00727CFD /* explosion.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED0333561ED5298F00727CFD /* explosion.wav */; };
+		ED0333591ED53C2800727CFD /* bensound-psychedelic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED0333581ED53C2800727CFD /* bensound-psychedelic.mp3 */; };
+		ED03335D1ED6082800727CFD /* coin.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED03335C1ED6082800727CFD /* coin.wav */; };
+		ED03335F1ED6083500727CFD /* jump.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED03335E1ED6083500727CFD /* jump.wav */; };
+		ED0891801ED4A800000E21C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED08917F1ED4A800000E21C8 /* AppDelegate.swift */; };
+		ED0891881ED4A800000E21C8 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0891871ED4A800000E21C8 /* GameViewController.swift */; };
+		ED08918B1ED4A800000E21C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED0891891ED4A800000E21C8 /* Main.storyboard */; };
+		ED08918D1ED4A800000E21C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED08918C1ED4A800000E21C8 /* Assets.xcassets */; };
+		ED0891901ED4A800000E21C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED08918E1ED4A800000E21C8 /* LaunchScreen.storyboard */; };
+		ED0891B91ED4A967000E21C8 /* PlayerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0891B81ED4A967000E21C8 /* PlayerClass.swift */; };
+		ED0891BD1ED4A9A3000E21C8 /* ItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0891BC1ED4A9A3000E21C8 /* ItemController.swift */; };
+		ED0891C31ED4A9EB000E21C8 /* BGClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0891C21ED4A9EB000E21C8 /* BGClass.swift */; };
+		ED0891C71ED4AA0B000E21C8 /* GroundClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0891C61ED4AA0B000E21C8 /* GroundClass.swift */; };
+		ED0891CC1ED4AA4B000E21C8 /* GamePlaySceneClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0891CB1ED4AA4B000E21C8 /* GamePlaySceneClass.swift */; };
+		ED0891D01ED4AA6A000E21C8 /* MainMenuSceneClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0891CF1ED4AA6A000E21C8 /* MainMenuSceneClass.swift */; };
+		ED0891D41ED4AAD2000E21C8 /* GamePlayScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = ED0891D31ED4AAD2000E21C8 /* GamePlayScene.sks */; };
+		ED0891D81ED4AAE7000E21C8 /* MainMenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = ED0891D71ED4AAE7000E21C8 /* MainMenuScene.sks */; };
+		ED0891DC1ED4C140000E21C8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED0891DB1ED4C140000E21C8 /* GoogleService-Info.plist */; };
+		EDFD5C981ED4D63300A39EB1 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFD5C971ED4D63300A39EB1 /* iAd.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7D561EA58AE5A595B0C5DF48 /* Pods-FlippyVerse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlippyVerse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlippyVerse/Pods-FlippyVerse.debug.xcconfig"; sourceTree = "<group>"; };
+		D048EA0B38635432513A6E27 /* Pods_FlippyVerse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlippyVerse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA1199A2733CECCB5F52E2D8 /* Pods-FlippyVerse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlippyVerse.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlippyVerse/Pods-FlippyVerse.release.xcconfig"; sourceTree = "<group>"; };
+		ED0333561ED5298F00727CFD /* explosion.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = explosion.wav; sourceTree = "<group>"; };
+		ED0333581ED53C2800727CFD /* bensound-psychedelic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bensound-psychedelic.mp3"; sourceTree = "<group>"; };
+		ED03335C1ED6082800727CFD /* coin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = coin.wav; path = Assets/Audio/coin.wav; sourceTree = "<group>"; };
+		ED03335E1ED6083500727CFD /* jump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = jump.wav; path = Assets/Audio/jump.wav; sourceTree = "<group>"; };
+		ED08917C1ED4A800000E21C8 /* FlippyVerse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlippyVerse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED08917F1ED4A800000E21C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ED0891871ED4A800000E21C8 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		ED08918A1ED4A800000E21C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED08918C1ED4A800000E21C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED08918F1ED4A800000E21C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ED0891911ED4A800000E21C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED0891B81ED4A967000E21C8 /* PlayerClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerClass.swift; sourceTree = "<group>"; };
+		ED0891BC1ED4A9A3000E21C8 /* ItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemController.swift; sourceTree = "<group>"; };
+		ED0891C21ED4A9EB000E21C8 /* BGClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BGClass.swift; sourceTree = "<group>"; };
+		ED0891C61ED4AA0B000E21C8 /* GroundClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroundClass.swift; sourceTree = "<group>"; };
+		ED0891CB1ED4AA4B000E21C8 /* GamePlaySceneClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePlaySceneClass.swift; sourceTree = "<group>"; };
+		ED0891CF1ED4AA6A000E21C8 /* MainMenuSceneClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuSceneClass.swift; sourceTree = "<group>"; };
+		ED0891D31ED4AAD2000E21C8 /* GamePlayScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GamePlayScene.sks; sourceTree = "<group>"; };
+		ED0891D71ED4AAE7000E21C8 /* MainMenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenuScene.sks; sourceTree = "<group>"; };
+		ED0891DB1ED4C140000E21C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ED4ED92C1EDF1E4E000AD9D8 /* FlippyVerse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FlippyVerse.entitlements; sourceTree = "<group>"; };
+		EDFD5C971ED4D63300A39EB1 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED0891791ED4A800000E21C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDFD5C981ED4D63300A39EB1 /* iAd.framework in Frameworks */,
+				2E1BAC045D990393E9AD02AB /* Pods_FlippyVerse.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3288675699DE2515DB0E7256 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EDFD5C971ED4D63300A39EB1 /* iAd.framework */,
+				D048EA0B38635432513A6E27 /* Pods_FlippyVerse.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D351ADE90466B5286EB0514B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7D561EA58AE5A595B0C5DF48 /* Pods-FlippyVerse.debug.xcconfig */,
+				EA1199A2733CECCB5F52E2D8 /* Pods-FlippyVerse.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		ED0891731ED4A800000E21C8 = {
+			isa = PBXGroup;
+			children = (
+				ED08917E1ED4A800000E21C8 /* FlippyVerse */,
+				ED08917D1ED4A800000E21C8 /* Products */,
+				D351ADE90466B5286EB0514B /* Pods */,
+				3288675699DE2515DB0E7256 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		ED08917D1ED4A800000E21C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED08917C1ED4A800000E21C8 /* FlippyVerse.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED08917E1ED4A800000E21C8 /* FlippyVerse */ = {
+			isa = PBXGroup;
+			children = (
+				ED4ED92C1EDF1E4E000AD9D8 /* FlippyVerse.entitlements */,
+				ED03335E1ED6083500727CFD /* jump.wav */,
+				ED03335C1ED6082800727CFD /* coin.wav */,
+				ED0333581ED53C2800727CFD /* bensound-psychedelic.mp3 */,
+				ED0333561ED5298F00727CFD /* explosion.wav */,
+				ED0891B61ED4A8A6000E21C8 /* Scenes */,
+				ED0891B51ED4A89F000E21C8 /* Classes */,
+				ED0891B41ED4A880000E21C8 /* Supporting Files */,
+			);
+			path = FlippyVerse;
+			sourceTree = "<group>";
+		};
+		ED0891B41ED4A880000E21C8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED0891DB1ED4C140000E21C8 /* GoogleService-Info.plist */,
+				ED08917F1ED4A800000E21C8 /* AppDelegate.swift */,
+				ED0891871ED4A800000E21C8 /* GameViewController.swift */,
+				ED0891891ED4A800000E21C8 /* Main.storyboard */,
+				ED08918C1ED4A800000E21C8 /* Assets.xcassets */,
+				ED08918E1ED4A800000E21C8 /* LaunchScreen.storyboard */,
+				ED0891911ED4A800000E21C8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ED0891B51ED4A89F000E21C8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				ED0891CA1ED4AA34000E21C8 /* Scene Classes */,
+				ED0891C11ED4A9CE000E21C8 /* BG/FG Classes */,
+				ED0891C01ED4A9AE000E21C8 /* Item Controller Class */,
+				ED0891B71ED4A93D000E21C8 /* Player */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		ED0891B61ED4A8A6000E21C8 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				ED0891D31ED4AAD2000E21C8 /* GamePlayScene.sks */,
+				ED0891D71ED4AAE7000E21C8 /* MainMenuScene.sks */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		ED0891B71ED4A93D000E21C8 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				ED0891B81ED4A967000E21C8 /* PlayerClass.swift */,
+			);
+			name = Player;
+			sourceTree = "<group>";
+		};
+		ED0891C01ED4A9AE000E21C8 /* Item Controller Class */ = {
+			isa = PBXGroup;
+			children = (
+				ED0891BC1ED4A9A3000E21C8 /* ItemController.swift */,
+			);
+			name = "Item Controller Class";
+			sourceTree = "<group>";
+		};
+		ED0891C11ED4A9CE000E21C8 /* BG/FG Classes */ = {
+			isa = PBXGroup;
+			children = (
+				ED0891C21ED4A9EB000E21C8 /* BGClass.swift */,
+				ED0891C61ED4AA0B000E21C8 /* GroundClass.swift */,
+			);
+			name = "BG/FG Classes";
+			sourceTree = "<group>";
+		};
+		ED0891CA1ED4AA34000E21C8 /* Scene Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EDCF64911EDA0ECC0082E34F /* ShareView */,
+				ED0891CB1ED4AA4B000E21C8 /* GamePlaySceneClass.swift */,
+				ED0891CF1ED4AA6A000E21C8 /* MainMenuSceneClass.swift */,
+			);
+			name = "Scene Classes";
+			sourceTree = "<group>";
+		};
+		EDCF64911EDA0ECC0082E34F /* ShareView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ShareView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED08917B1ED4A800000E21C8 /* FlippyVerse */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED0891AA1ED4A800000E21C8 /* Build configuration list for PBXNativeTarget "FlippyVerse" */;
+			buildPhases = (
+				A1CBB8731FABC030CC1E7FF8 /* [CP] Check Pods Manifest.lock */,
+				ED0891781ED4A800000E21C8 /* Sources */,
+				ED0891791ED4A800000E21C8 /* Frameworks */,
+				ED08917A1ED4A800000E21C8 /* Resources */,
+				CBD88FF10453AC237FC194F3 /* [CP] Embed Pods Frameworks */,
+				982FA74DFB78F7C63F8F8013 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlippyVerse;
+			productName = FlippyVerse;
+			productReference = ED08917C1ED4A800000E21C8 /* FlippyVerse.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED0891741ED4A800000E21C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Jeet Trivedi";
+				TargetAttributes = {
+					ED08917B1ED4A800000E21C8 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 2HF3UZVNXY;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = ED0891771ED4A800000E21C8 /* Build configuration list for PBXProject "FlippyVerse" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ED0891731ED4A800000E21C8;
+			productRefGroup = ED08917D1ED4A800000E21C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED08917B1ED4A800000E21C8 /* FlippyVerse */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED08917A1ED4A800000E21C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED03335F1ED6083500727CFD /* jump.wav in Resources */,
+				ED08918B1ED4A800000E21C8 /* Main.storyboard in Resources */,
+				ED08918D1ED4A800000E21C8 /* Assets.xcassets in Resources */,
+				ED0333571ED5298F00727CFD /* explosion.wav in Resources */,
+				ED0891D41ED4AAD2000E21C8 /* GamePlayScene.sks in Resources */,
+				ED0891901ED4A800000E21C8 /* LaunchScreen.storyboard in Resources */,
+				ED0891D81ED4AAE7000E21C8 /* MainMenuScene.sks in Resources */,
+				ED03335D1ED6082800727CFD /* coin.wav in Resources */,
+				ED0333591ED53C2800727CFD /* bensound-psychedelic.mp3 in Resources */,
+				ED0891DC1ED4C140000E21C8 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		982FA74DFB78F7C63F8F8013 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlippyVerse/Pods-FlippyVerse-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1CBB8731FABC030CC1E7FF8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CBD88FF10453AC237FC194F3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlippyVerse/Pods-FlippyVerse-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED0891781ED4A800000E21C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED0891CC1ED4AA4B000E21C8 /* GamePlaySceneClass.swift in Sources */,
+				ED0891D01ED4AA6A000E21C8 /* MainMenuSceneClass.swift in Sources */,
+				ED0891B91ED4A967000E21C8 /* PlayerClass.swift in Sources */,
+				ED0891881ED4A800000E21C8 /* GameViewController.swift in Sources */,
+				ED0891BD1ED4A9A3000E21C8 /* ItemController.swift in Sources */,
+				ED0891C31ED4A9EB000E21C8 /* BGClass.swift in Sources */,
+				ED0891801ED4A800000E21C8 /* AppDelegate.swift in Sources */,
+				ED0891C71ED4AA0B000E21C8 /* GroundClass.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ED0891891ED4A800000E21C8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED08918A1ED4A800000E21C8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ED08918E1ED4A800000E21C8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED08918F1ED4A800000E21C8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ED0891A81ED4A800000E21C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ED0891A91ED4A800000E21C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED0891AB1ED4A800000E21C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D561EA58AE5A595B0C5DF48 /* Pods-FlippyVerse.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FlippyVerse/FlippyVerse.entitlements;
+				DEVELOPMENT_TEAM = 2HF3UZVNXY;
+				INFOPLIST_FILE = FlippyVerse/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeettrivedi.FlippyVerse;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ED0891AC1ED4A800000E21C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA1199A2733CECCB5F52E2D8 /* Pods-FlippyVerse.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FlippyVerse/FlippyVerse.entitlements;
+				DEVELOPMENT_TEAM = 2HF3UZVNXY;
+				INFOPLIST_FILE = FlippyVerse/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeettrivedi.FlippyVerse;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED0891771ED4A800000E21C8 /* Build configuration list for PBXProject "FlippyVerse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED0891A81ED4A800000E21C8 /* Debug */,
+				ED0891A91ED4A800000E21C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED0891AA1ED4A800000E21C8 /* Build configuration list for PBXNativeTarget "FlippyVerse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED0891AB1ED4A800000E21C8 /* Debug */,
+				ED0891AC1ED4A800000E21C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED0891741ED4A800000E21C8 /* Project object */;
+}

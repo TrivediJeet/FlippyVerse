@@ -1,0 +1,6 @@
+framework module Pods_FlippyVerse {
+  umbrella header "Pods-FlippyVerse-umbrella.h"
+
+  export *
+  module * { export * }
+}
