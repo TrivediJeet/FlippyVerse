@@ -92,7 +92,7 @@ class GameViewController: UIViewController, GADInterstitialDelegate, GKGameCente
         var interstitial = GADInterstitial(adUnitID: "ca-app-pub-5973810555125553/3653591723")
         interstitial.delegate = self
         let request = GADRequest()
-        request.testDevices = [kGADSimulatorID]
+        request.testDevices = [kGADSimulatorID, "80f8e1e2875e5875e366f11343ecae5ac416da2f"]
         interstitial.load(request)
         return interstitial
     }

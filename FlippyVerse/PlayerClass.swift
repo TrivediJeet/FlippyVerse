@@ -41,10 +41,18 @@ class Player: SKSpriteNode{
     }
     
     func move(distance: Int){
-        if distance > 1000 {
+        if distance < 500 {
             self.position.x += 10
+        } else if distance < 1000 {
+            self.position.x += 15
+        } else if distance < 1000 {
+            self.position.x += 15
+        } else if distance < 1000 {
+            self.position.x += 15
+        } else if distance < 1000 {
+            self.position.x += 15
         } else {
-            self.position.x += 10
+            self.position.x += 20
         }
     }
     

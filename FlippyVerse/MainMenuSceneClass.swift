@@ -28,13 +28,13 @@ class MainMenuSceneClass: SKScene {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
+            
             let location = touch.location(in: self)
             
-            if atPoint(location).name == "Share" {
+            if atPoint(location).name == "Leaderboard" {
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue:"openGameCenter"), object: nil)
             }
             if atPoint(location).name == "Start" {
-                
                 if let view = self.view {
                     if let scene = GameplaySceneClass(fileNamed: "GamePlayScene") {
                         scene.scaleMode = SKSceneScaleMode.aspectFit
@@ -47,21 +47,14 @@ class MainMenuSceneClass: SKScene {
                         scene.scaleMode = .aspectFit
                         view.presentScene(scene)
                     }
-                    
- 
                     view.ignoresSiblingOrder = true
-                    //view.showsPhysics = true
-                    view.showsFPS = true
-//                    view.showsNodeCount = true
                 }
             }
         }
     }
-    
 }
 
 extension UIButton {
-    ///set Corner Radius for UIButton
     @IBInspectable var cornerRadius:CGFloat {
         get {
             return layer.cornerRadius

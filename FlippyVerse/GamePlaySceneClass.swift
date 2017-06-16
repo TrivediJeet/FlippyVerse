@@ -14,68 +14,101 @@ import GameKit
 
 class GameplaySceneClass: SKScene, SKPhysicsContactDelegate {
     
+    private var mainCamera: SKCameraNode?
     let defaults = UserDefaults.standard
+    var audioPlayer = AVAudioPlayer()
+    private var score = 0
+    private var distance = 0
+    private var clickicon: SKNode?
+    private var player: Player?
+    private var scoreLabel: SKLabelNode?
+    private var distanceLabel: SKLabelNode?
+
+    private var itemController = ItemController()
     
-    
-    private var bg4: BGClass?
     private var bg1: BGClass?
     private var bg2: BGClass?
     private var bg3: BGClass?
+    private var bg4: BGClass?
+    private var bg5: BGClass?
+    private var bg6: BGClass?
+    private var bg7: BGClass?
+    private var bg8: BGClass?
+    private var bg9: BGClass?
+    
     private var ground1: GroundClass?
     private var ground2: GroundClass?
     private var ground3: GroundClass?
-    private var floor1: GroundClass?
-    private var floor2: GroundClass?
-    private var floor3: GroundClass?
-    private var player: Player?
-    private var clickicon: SKNode?
-    private var itemController = ItemController()
-    var audioPlayer = AVAudioPlayer()
+    private var ground4: GroundClass?
+    private var ground5: GroundClass?
+    private var ground6: GroundClass?
+
     
-    private var scoreLabel: SKLabelNode?
-    private var distanceLabel: SKLabelNode?
-    private var score = 0
-    private var distance = 0
-    
-    private var mainCamera: SKCameraNode?
-    
+    private var roof1: GroundClass?
+    private var roof2: GroundClass?
+    private var roof3: GroundClass?
+    private var roof4: GroundClass?
+    private var roof5: GroundClass?
+    private var roof6: GroundClass?
+
     override func didMove(to view: SKView) {
         initializeGame()
     }
 
     private func initializeGame(){
+        
         physicsWorld.contactDelegate = self
+        
         mainCamera = childNode(withName: "MainCamera") as? SKCameraNode
+        
         clickicon = mainCamera?.childNode(withName: "ClickIcon")
         initializeclickanimation(clickicon: clickicon!)
-        bg4 = childNode(withName: "BG4") as? BGClass
         
+        player = childNode(withName: "Player") as? Player
+        player?.initializePlayer()
         
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            
-        }
+        scoreLabel = mainCamera?.childNode(withName: "ScoreLabel") as? SKLabelNode
+        scoreLabel?.text = "0"
+        
+        distanceLabel = mainCamera?.childNode(withName: "DistanceLabel") as? SKLabelNode
+        distanceLabel?.text = "0m"
         
         bg1 = childNode(withName: "BG1") as? BGClass
         bg2 = childNode(withName: "BG2") as? BGClass
         bg3 = childNode(withName: "BG3") as? BGClass
+        bg4 = childNode(withName: "BG4") as? BGClass
+        bg5 = childNode(withName: "BG5") as? BGClass
+        bg6 = childNode(withName: "BG6") as? BGClass
+        bg7 = childNode(withName: "BG7") as? BGClass
+        bg8 = childNode(withName: "BG8") as? BGClass
+        bg9 = childNode(withName: "BG9") as? BGClass
+
         ground1 = childNode(withName: "Ground1") as? GroundClass!
         ground2 = childNode(withName: "Ground2") as? GroundClass!
         ground3 = childNode(withName: "Ground3") as? GroundClass!
+        ground4 = childNode(withName: "Ground4") as? GroundClass!
+        ground5 = childNode(withName: "Ground5") as? GroundClass!
+        ground6 = childNode(withName: "Ground6") as? GroundClass!
         ground1?.initializeGroundAndFloor()
         ground2?.initializeGroundAndFloor()
         ground3?.initializeGroundAndFloor()
-        floor1 = childNode(withName: "Floor1") as? GroundClass!
-        floor2 = childNode(withName: "Floor2") as? GroundClass!
-        floor3 = childNode(withName: "Floor3") as? GroundClass!
-        floor1?.initializeGroundAndFloor()
-        floor2?.initializeGroundAndFloor()
-        floor3?.initializeGroundAndFloor()
-        player = childNode(withName: "Player") as? Player
-        player?.initializePlayer()
-        scoreLabel = mainCamera?.childNode(withName: "ScoreLabel") as? SKLabelNode
-        scoreLabel?.text = "0"
-        distanceLabel = mainCamera?.childNode(withName: "DistanceLabel") as? SKLabelNode
-        distanceLabel?.text = "0mm"
+        ground4?.initializeGroundAndFloor()
+        ground5?.initializeGroundAndFloor()
+        ground6?.initializeGroundAndFloor()
+        
+        roof1 = childNode(withName: "Roof1") as? GroundClass!
+        roof2 = childNode(withName: "Roof2") as? GroundClass!
+        roof3 = childNode(withName: "Roof3") as? GroundClass!
+        roof4 = childNode(withName: "Roof4") as? GroundClass!
+        roof5 = childNode(withName: "Roof5") as? GroundClass!
+        roof6 = childNode(withName: "Roof6") as? GroundClass!
+        roof1?.initializeGroundAndFloor()
+        roof2?.initializeGroundAndFloor()
+        roof3?.initializeGroundAndFloor()
+        roof4?.initializeGroundAndFloor()
+        roof5?.initializeGroundAndFloor()
+        roof6?.initializeGroundAndFloor()
+        
         Timer.scheduledTimer(timeInterval: TimeInterval(6), target: self, selector: #selector(GameplaySceneClass.spawnRockets), userInfo: nil, repeats: true)
         Timer.scheduledTimer(timeInterval: TimeInterval(1.5), target: self, selector: #selector(GameplaySceneClass.spawnCoins), userInfo: nil, repeats: true)
         Timer.scheduledTimer(timeInterval: TimeInterval(7), target: self, selector: #selector(GameplaySceneClass.removeItems), userInfo: nil, repeats: true)
@@ -93,11 +126,42 @@ class GameplaySceneClass: SKScene, SKPhysicsContactDelegate {
     
     private func manageCamera(){
         
-        if distance < 1000 {
+        if distance < 500 {
             self.mainCamera?.position.x += 10
+        } else if distance < 1000 {
+            self.mainCamera?.position.x += 12
+        } else if distance < 1500 {
+            self.mainCamera?.position.x += 14
+        } else if distance < 2000 {
+            self.mainCamera?.position.x += 16
+        } else if distance < 2500 {
+            self.mainCamera?.position.x += 18
         } else {
-            self.mainCamera?.position.x += 10
+            self.mainCamera?.position.x += 20
         }
+    }
+    
+    private func manageBGsAndGrounds(){
+        bg1?.moveBG(camera: mainCamera!)
+        bg2?.moveBG(camera: mainCamera!)
+        bg3?.moveBG(camera: mainCamera!)
+        bg4?.moveBG(camera: mainCamera!)
+        bg5?.moveBG(camera: mainCamera!)
+        bg6?.moveBG(camera: mainCamera!)
+
+        ground1?.moveGroundsOrFloors(camera: mainCamera!)
+        ground2?.moveGroundsOrFloors(camera: mainCamera!)
+        ground3?.moveGroundsOrFloors(camera: mainCamera!)
+        ground4?.moveGroundsOrFloors(camera: mainCamera!)
+        ground5?.moveGroundsOrFloors(camera: mainCamera!)
+        ground6?.moveGroundsOrFloors(camera: mainCamera!)
+        
+        roof1?.moveGroundsOrFloors(camera: mainCamera!)
+        roof2?.moveGroundsOrFloors(camera: mainCamera!)
+        roof3?.moveGroundsOrFloors(camera: mainCamera!)
+        roof4?.moveGroundsOrFloors(camera: mainCamera!)
+        roof5?.moveGroundsOrFloors(camera: mainCamera!)
+        roof6?.moveGroundsOrFloors(camera: mainCamera!)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -140,22 +204,7 @@ class GameplaySceneClass: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    
-    private func manageBGsAndGrounds(){
-        bg1?.moveBG(camera: mainCamera!)
-        bg2?.moveBG(camera: mainCamera!)
-        bg3?.moveBG(camera: mainCamera!)
-        bg4?.moveBG(camera: mainCamera!)
-        
-        ground1?.moveGroundsOrFloors(camera: mainCamera!)
-        ground2?.moveGroundsOrFloors(camera: mainCamera!)
-        ground3?.moveGroundsOrFloors(camera: mainCamera!)
-        
-        floor1?.moveGroundsOrFloors(camera: mainCamera!)
-        floor2?.moveGroundsOrFloors(camera: mainCamera!)
-        floor3?.moveGroundsOrFloors(camera: mainCamera!)
-    }
-    
+
     private func reverseGravity() {
         physicsWorld.gravity.dy *= (-1)
         player?.reversePlayer()
@@ -196,6 +245,7 @@ class GameplaySceneClass: SKScene, SKPhysicsContactDelegate {
             }
         }
     }
+    
     func initializeclickanimation(clickicon: SKNode){
         NotificationCenter.default.post(name: NSNotification.Name(rawValue:"incrementgameplaycount"), object: nil)
         let fadeOut = SKAction.fadeOut(withDuration: 1)

@@ -18,7 +18,7 @@ class ItemController {
     
     private var minY = CGFloat(-263), maxY = CGFloat(263)
     
-    var item: SKSpriteNode?;
+    var item: SKSpriteNode?
     
     func spawnRocket(camera: SKCameraNode) -> SKSpriteNode {
         
@@ -31,7 +31,7 @@ class ItemController {
         item?.name = "Rocket"
         item?.setScale(0.2)
         item?.physicsBody = SKPhysicsBody(rectangleOf: item!.size)
-        item!.physicsBody?.affectedByGravity = false
+        item?.physicsBody?.affectedByGravity = false
         item?.physicsBody?.categoryBitMask = ColliderType.ROCKET_AND_COLLECTABLES
         item?.physicsBody?.collisionBitMask = ColliderType.PLAYER
         item?.physicsBody?.contactTestBitMask = ColliderType.PLAYER
