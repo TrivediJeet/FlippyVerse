@@ -44,13 +44,13 @@ class Player: SKSpriteNode{
         if distance < 500 {
             self.position.x += 10
         } else if distance < 1000 {
-            self.position.x += 15
-        } else if distance < 1000 {
-            self.position.x += 15
-        } else if distance < 1000 {
-            self.position.x += 15
-        } else if distance < 1000 {
-            self.position.x += 15
+            self.position.x += 12
+        } else if distance < 1500 {
+            self.position.x += 14
+        } else if distance < 2000 {
+            self.position.x += 16
+        } else if distance < 2500 {
+            self.position.x += 18
         } else {
             self.position.x += 20
         }

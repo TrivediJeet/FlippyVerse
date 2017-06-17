@@ -52,9 +52,9 @@ class ItemController {
         }
         animateCoinRotation = SKAction.animate(with: coinAnimation, timePerFrame: 0.1)
         
-        item = SKSpriteNode(imageNamed: "Coin")
+        item = SKSpriteNode(imageNamed: "coin1")
         item?.name = "Coin"
-        item?.setScale(0.7)
+        item?.setScale(0.025)
         item?.physicsBody = SKPhysicsBody(circleOfRadius: item!.size.height / 2)
         item!.physicsBody?.affectedByGravity = false
         item?.physicsBody?.categoryBitMask = ColliderType.ROCKET_AND_COLLECTABLES
